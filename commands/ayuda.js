@@ -15,7 +15,7 @@ module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
       '/Estadisticas - Mostrar las estadísticas de inflexión',
       '/ayuda - Está en ayuda',
       '/informacion - Informacion sobre el bot',
-      '/EstablecerStikers [name] - Establecer pack de stickerpara el canal (pepe or none)',
+      '/EstablecerStikers [name] - Establecer pack de sticker para el canal (pepe or none)',
     ].join('\n')
   );
 };
