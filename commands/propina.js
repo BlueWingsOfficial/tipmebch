@@ -109,11 +109,11 @@ module.exports = async ({
 
   const amountText = await formatBchWithUsd(actualAmount);
 
-  await reply(`Ha enviado ${amountText} a ${toUserRaw}!`);
+  await reply(`Usted ha enviado ${amountText} a ${toUserRaw}!`);
 
   if (!userIsKnown) {
     await reply(
-      `@${toUsername} necesita reclamar la propina diciendo / reclamar. @${NombreDeUsuario} puede revertir la sugerencia con "/undo ${unclaimedId}" hasta ese momento`
+      `@${toUsername} necesita reclamar la propina diciendo /reclamar. @${NombreDeUsuario} puede revertir la sugerencia con "/undo ${unclaimedId}" hasta ese momento`
     );
   }
 
