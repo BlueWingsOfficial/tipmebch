@@ -23,12 +23,12 @@ module.exports = async ({ reply, redisClient, ctx }) => {
 
   await reply(
     [
-      `${introCount || 0} have introduced themselves to me`,
-      `Users have tipped ${tippedCount || 0} times, totaling ${tippedBch ||
+      `${introCount || 0} Se han presentado a mi`,
+      `Los usuarios han inclinado ${tippedCount || 0} veces, por un total ${tippedBch ||
         0} BCH (${formatUsd(tippedUsd || 0)})`,
       `${withdrawnBch || 0} BCH (${formatUsd(
         withdrawnUsd || 0
-      )}) has been sent out in ${withdrawnCount || 0} withdraws`,
+      )}) Ha sido enviado en ${withdrawnCount || 0} Se retira inclinado`,
     ].join('\n')
   );
 };
