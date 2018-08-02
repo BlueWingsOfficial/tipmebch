@@ -47,7 +47,7 @@ module.exports = async ({ ctx, userId, fetchRpc }) => {
       .toNumber()
   );
 
-  await ctx.reply(`Balance: ${asText}`, { parse_mode: 'markdown' });
+  await ctx.reply(`Saldo: ${asText}`, { parse_mode: 'markdown' });
 
   const stickerId = getBalanceSticker(ctx.stickerSet, asUsd);
 
