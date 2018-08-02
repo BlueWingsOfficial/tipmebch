@@ -20,7 +20,7 @@ module.exports = async ({
 }) => {
   if (params.length !== 2) {
     await reply(
-      `I don't understand this command. I expected "/tipbch 0.01 @username" or "/tipbch $1 @username"`
+      `El comando que has usado no ha sido escrito correctamente. Te sugiero usar "/tipbch 0.01 @username" o "/tipbch $1 @username"`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
