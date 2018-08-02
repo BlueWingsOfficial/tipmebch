@@ -22,11 +22,11 @@ module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
     {
       media: { source: qr },
       type: 'photo',
-      caption: `Scan this QR code to deposit`,
+      caption: `Escanea este código QR para depositar`,
     },
   ]);
 
-  await ctx.reply(`To deposit Bitcoin (BCH), send to:`);
+  await ctx.reply(`Para depositar Bitcoin Cash (BCH), envíe a:`);
 
   await ctx.reply(address);
 };
