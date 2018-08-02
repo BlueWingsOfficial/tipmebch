@@ -7,8 +7,8 @@ module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
 
   await reply(
     [
-      '/propina $1.23 - Enviar propina (Expresando la cantidad en dólares)',
-      '/propina 0.0001 - Enviar propina (Expresando la cantidad en Bitcoin Cash)',
+      '/propina $1.23 - Enviar propina (expresado la cantidad en dólares)',
+      '/propina 0.0001 - Enviar propina (expresado la cantidad en Bitcoin Cash)',
       '/saldo - Muestra su saldo',
       '/deposito - Te genera una dirección de deposito (sólo funciona si lo escribes al bot por mensaje privado)',
       '/retirar <cartera> [<Cantidad de BCH>|$<Cantidad de USD>|all> - Te permite realizar retiros',
