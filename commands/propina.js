@@ -33,7 +33,7 @@ module.exports = async ({
   if (!toUserMatch) {
     console.warn(`Invalid username format for ${toUserRaw}`);
     await reply(
-      `El formato de nombre de usuario no es válido. Sugiero /propina $1 @SomeUserName`
+      `El formato de nombre de usuario no es válido. Sugiero /propina $1 @NombreDeUsuario`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
