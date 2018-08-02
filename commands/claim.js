@@ -2,7 +2,7 @@ module.exports = async ({ ctx, reply, username }) => {
   await ctx.maybeReplyFromStickerSet('claim');
 
   await ctx.reply(
-    `You're all set! From now on @${username} does not need to \`/claim\` to receive tips`,
+    `¡Estás Listo! A partir de ahora @${username} no necesita \`/claim\` para recibir consejos`,
     { parse_mode: 'markdown' }
   );
 };
