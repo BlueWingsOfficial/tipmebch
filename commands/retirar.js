@@ -59,7 +59,7 @@ module.exports = async ({
     const amountText = await formatBchWithUsd(actualAmount);
     const url = `https://explorer.bitcoin.com/bch/tx/${txid}`;
 
-    await reply(`Usted retira ${amountText}: ${url}`);
+    await reply(`Usted ha retirado ${amountText}: ${url}`);
   } catch (e) {
     if (e instanceof BalanceWouldBecomeNegativeError) {
       await ctx.maybeReplyFromStickerSet('insufficient-balance');
