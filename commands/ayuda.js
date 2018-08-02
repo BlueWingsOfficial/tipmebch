@@ -15,7 +15,7 @@ module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
       '/Estadisticas - Te muestras las estadísticas en relación a las propinas',
       '/ayuda - Te muestra los comandos',
       '/informacion - Informacion sobre el bot',
-      '/EstablecerStikers [name] - Establecer pack de sticker para el canal (pepe or none)',
+      '/setstickerset [name] - Set sticker set for channel (pepe or none)',
     ].join('\n')
   );
 };
