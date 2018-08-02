@@ -20,12 +20,12 @@ module.exports = async ({
   ctx,
 }) => {
   if (!isPm) {
-    await reply('That command only works in a private message to me.');
+    await reply('Ese comando solo funciona en un mensaje privado para mí.');
     return;
   }
 
   if (params.length !== 2) {
-    await reply(`I don't understand that. /withdraw <address> <bch amount>`);
+    await reply(`El comando que has usado no es correcto. / retirar <billetera> <cantidad de BCH>`);
     return;
   }
 
@@ -39,7 +39,7 @@ module.exports = async ({
 
   if (!theirAmount) {
     await reply(
-      `I don't understand that amount. Tell me the amount of BCH. /withdraw <address> <0.0001>`
+      `El comando que has usado no es correcto. Dime la cantidad de BCH de la siguiente manera. / retirar <billetera> <0.0001>`
     );
     return;
   }
@@ -59,7 +59,7 @@ module.exports = async ({
     const amountText = await formatBchWithUsd(actualAmount);
     const url = `https://explorer.bitcoin.com/bch/tx/${txid}`;
 
-    await reply(`You withdrew ${amountText}: ${url}`);
+    await reply(`Usted retira ${amountText}: ${url}`);
   } catch (e) {
     if (e instanceof BalanceWouldBecomeNegativeError) {
       await ctx.maybeReplyFromStickerSet('insufficient-balance');
