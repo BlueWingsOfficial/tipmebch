@@ -26,7 +26,7 @@ module.exports = async ({
 
   if (!knownSets.includes(setName)) {
     return reply(
-      `No sé ese conjunto. Sugiero: / establecerSticker <$ {knownSets.join ('|')}> `
+      `No sé ese conjunto. Sugiero: /establecerSticker <$ {knownSets.join ('|')}> `
     );
   }
 
