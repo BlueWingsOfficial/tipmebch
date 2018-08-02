@@ -28,7 +28,7 @@ module.exports = async ({ reply, redisClient, ctx }) => {
         0} BCH (${formatUsd(tippedUsd || 0)})`,
       `${withdrawnBch || 0} BCH (${formatUsd(
         withdrawnUsd || 0
-      )}) Han retirado un total ${withdrawnCount || 0}`,
+      )}) ha retirado un total ${withdrawnCount || 0}`,
     ].join('\n')
   );
 };
