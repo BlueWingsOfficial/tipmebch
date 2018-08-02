@@ -25,7 +25,7 @@ module.exports = async ({
   }
 
   if (params.length !== 2) {
-    await reply(`El comando que has usado no es correcto. Prueba con / retirar <billetera> <cantidad de BCH>`);
+    await reply(`El comando que has usado no es correcto. Prueba con /retirar <cartera> <cantidad de BCH>`);
     return;
   }
 
@@ -39,7 +39,7 @@ module.exports = async ({
 
   if (!theirAmount) {
     await reply(
-      `El comando que has usado no es correcto. Dime la cantidad de BCH de la siguiente manera. / retirar <billetera> <0.0001>`
+      `El comando que has usado no es correcto. Dime la cantidad de BCH de la siguiente manera. /retirar <cartera> <0.0001>`
     );
     return;
   }
