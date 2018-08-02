@@ -11,7 +11,7 @@ module.exports = async ({
   username,
 }) => {
   if (!isAdmin) {
-    return reply(`Lo siento, @ $ {username}, pero no eres administrador en este chat.`);
+    return reply(`Lo siento, @ $ {NombreDeUsuario}, pero no eres administrador en este chat.`);
   }
 
   const knownSets = Object.keys(stickers);
@@ -26,7 +26,7 @@ module.exports = async ({
 
   if (!knownSets.includes(setName)) {
     return reply(
-      `No sé ese conjunto. Pruebe esto: / establecerSticker <$ {knownSets.join ('|')}> `
+      `No sé ese conjunto. Sugiero: / establecerSticker <$ {knownSets.join ('|')}> `
     );
   }
 
@@ -36,6 +36,6 @@ module.exports = async ({
   );
 
   await reply(
-    `Bien, @ $ {username}, este chat ahora usará el pack de sticker $ {setName} `
+    `Bien, @ $ {NombreDeUsuario}, este chat ahora usará el pack de sticker $ {setName} `
   );
 };
