@@ -4,7 +4,7 @@ const { createQrCode, getAddressForUser } = require('../utils');
 module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
   if (!isPm) {
     console.log({ isPm });
-    await reply('That command only works in a private message to me.');
+    await reply('Este comando sólo funciona si me lo envías por mensaje privado.');
     return;
   }
 
@@ -26,7 +26,7 @@ module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
     },
   ]);
 
-  await ctx.reply(`Para depositar Bitcoin Cash (BCH), envíe a:`);
+  await ctx.reply(`Para hacer depósitos en Bitcoin Cash (BCH), envíelos a:`);
 
   await ctx.reply(address);
 };
