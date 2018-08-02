@@ -5,12 +5,12 @@ module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
 
   await reply(
     [
-      `Soy un bot (v${version}) escrito por Andreas Brekken (@abrkn) para inclinar Bitcoin Cash (BCH) en Telegram`,
-      'Pruebe el comando /ayuda en un mensaje privado',
-      `Puedes darme propina y se irá al grifo una vez esté listo.`,
-      `Soy un código abierto: https://github.com/abrkn/tipmebch`,
-      `Reportar errores aquí: https://github.com/abrkn/tipmebch/issues`,
-      `El bot no es una billetera. Sus fondos se perderán si hay errores`,
+      `Soy un bot (v${version}) escrito por Andreas Brekken (@abrkn) para enviar propinas de Bitcoin Cash (BCH) en Telegram`,
+      'Pruebe enviándome el comando /ayuda a través de un mensaje privado',
+      `Si me envías una propina, la misma irá a parar a los fondos del grifo de Bitcoin Cash (cuando esté listo)`,
+      `Soy una aplicación de código abierto: https://github.com/abrkn/tipmebch`,
+      `Reporta errores aquí: https://github.com/abrkn/tipmebch/issues`,
+      `El bot no esta diseñado para ser utilizado como cartera. Usted podría perder el saldo que tiene depositado en él a causa de un error`,
     ].join('\n')
   );
 };
