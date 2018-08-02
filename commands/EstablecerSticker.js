@@ -20,7 +20,7 @@ module.exports = async ({
 
   if (!setName) {
     return reply(
-      `El comando que has usado no ha sido escrito correctamente. Try this: /EstablecerSticker <${knownSets.join('|')}>`
+      `El comando que has usado no ha sido escrito correctamente. Intenta con el comando: /EstablecerSticker <${knownSets.join('|')}>`
     );
   }
 
