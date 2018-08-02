@@ -5,7 +5,7 @@ module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
 
   await reply(
     [
-      `Soy un bot (v${version}) escrito por Andreas Brekken (@abrkn) para enviar propinas de Bitcoin Cash (BCH) en Telegram`,
+      `Soy un bot (v${version}) creado por Andreas Brekken (@abrkn) para enviar Bitcoin Cash (BCH) como propina en Telegram`,
       'Pruebe enviándome el comando /ayuda a través de un mensaje privado',
       `Si me envías una propina, la misma irá a parar a los fondos del grifo de Bitcoin Cash (cuando esté listo)`,
       `Soy una aplicación de código abierto: https://github.com/abrkn/tipmebch`,
