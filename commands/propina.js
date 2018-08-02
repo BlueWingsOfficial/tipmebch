@@ -20,7 +20,7 @@ module.exports = async ({
 }) => {
   if (params.length !== 2) {
     await reply(
-      `El comando que has usado no ha sido escrito correctamente. Esperaba "/propina 0.01 @username" or "/propina $1 @username"`
+      `El comando que has usado no ha sido escrito correctamente. Sugiero (...) "/propina 0.01 @username" or "/propina $1 @username"`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
@@ -33,7 +33,7 @@ module.exports = async ({
   if (!toUserMatch) {
     console.warn(`Invalid username format for ${toUserRaw}`);
     await reply(
-      `Ese formato de nombre de usuario no es válido. Estoy esperando /propina $1 @SomeUserName`
+      `Ese formato de nombre de usuario no es válido. Sugiero (...) /propina $1 @SomeUserName`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
@@ -48,7 +48,7 @@ module.exports = async ({
 
   if (!bchAmount) {
     await reply(
-      `No entiendo la cantidad. Esperaba "/propina 0.01 @username" or "/propina $1 @username"`
+      `No entiendo la cantidad. Sugiero (...) "/propina 0.01 @username" or "/propina $1 @username"`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
