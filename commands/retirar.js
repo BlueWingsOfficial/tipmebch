@@ -20,12 +20,12 @@ module.exports = async ({
   ctx,
 }) => {
   if (!isPm) {
-    await reply('Ese comando solo funciona en un mensaje privado para mí.');
+    await reply('Este comando sólo funciona si me lo envías por mensaje privado.');
     return;
   }
 
   if (params.length !== 2) {
-    await reply(`El comando que has usado no es correcto. / retirar <billetera> <cantidad de BCH>`);
+    await reply(`El comando que has usado no es correcto. Prueba con / retirar <billetera> <cantidad de BCH>`);
     return;
   }
 
