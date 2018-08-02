@@ -20,7 +20,7 @@ module.exports = async ({
 }) => {
   if (params.length !== 2) {
     await reply(
-      `I don't understand this command. I expected "/tipbch 0.01 @username" or "/tipbch $1 @username"`
+      `El comando que has usado no ha sido escrito correctamente. Esperaba "/propina 0.01 @username" or "/propina $1 @username"`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
@@ -33,7 +33,7 @@ module.exports = async ({
   if (!toUserMatch) {
     console.warn(`Invalid username format for ${toUserRaw}`);
     await reply(
-      `That username format is invalid. I'm expecting /tipbch $1 @SomeUserName`
+      `Ese formato de nombre de usuario no es válido. Estoy esperando /propina $1 @SomeUserName`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
@@ -48,7 +48,7 @@ module.exports = async ({
 
   if (!bchAmount) {
     await reply(
-      `I don't understand the amount. I expected "/tipbch 0.01 @username" or "/tipbch $1 @username"`
+      `No entiendo la cantidad. Esperaba "/propina 0.01 @username" or "/propina $1 @username"`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
@@ -100,7 +100,7 @@ module.exports = async ({
   } catch (e) {
     if (e instanceof BalanceWouldBecomeNegativeError) {
       await ctx.maybeReplyFromStickerSet('insufficient-balance');
-      await ctx.reply(`Your balance would become negative...`);
+      await ctx.reply(`Su saldo es insuficiente...`);
       return;
     } else {
       throw e;
@@ -109,11 +109,11 @@ module.exports = async ({
 
   const amountText = await formatBchWithUsd(actualAmount);
 
-  await reply(`You tipped ${amountText} to ${toUserRaw}!`);
+  await reply(`Ha enviado ${amountText} a ${toUserRaw}!`);
 
   if (!userIsKnown) {
     await reply(
-      `@${toUsername} needs to claim the tip by saying /claim. @${username} can reverse the tip with "/undo ${unclaimedId}" until then`
+      `@${toUsername} necesita reclamar la propina diciendo / reclamar. @${username} puede revertir la sugerencia con "/undo ${unclaimedId}" hasta ese momento`
     );
   }
 
