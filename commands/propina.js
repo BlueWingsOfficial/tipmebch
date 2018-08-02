@@ -113,7 +113,7 @@ module.exports = async ({
 
   if (!userIsKnown) {
     await reply(
-      `@${toUsername} necesita reclamar la propina diciendo /reclamar. @${NombreDeUsuario} puede revertir la sugerencia con "/undo ${unclaimedId}" hasta ese momento`
+      `@${toUsername} necesita reclamar la propina diciendo /reclamar. @${NombreDeUsuario} puede revertir la propina con "/undo ${unclaimedId}" hasta ese momento`
     );
   }
 
