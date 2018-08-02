@@ -24,11 +24,11 @@ module.exports = async ({ reply, redisClient, ctx }) => {
   await reply(
     [
       `${introCount || 0} Se han presentado a mi`,
-      `Los usuarios han enviado en propinas unos ${tippedCount || 0} veces, es decir, unos ${tippedBch ||
+      `Los usuarios han enviado propinas ${tippedCount || 0} veces, por un total de ${tippedBch ||
         0} BCH (${formatUsd(tippedUsd || 0)})`,
       `${withdrawnBch || 0} BCH (${formatUsd(
         withdrawnUsd || 0
-      )}) Y ha retirado un total ${withdrawnCount || 0}`,
+      )}) Han retirado un total ${withdrawnCount || 0}`,
     ].join('\n')
   );
 };
