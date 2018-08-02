@@ -63,7 +63,7 @@ module.exports = async ({
   } catch (e) {
     if (e instanceof BalanceWouldBecomeNegativeError) {
       await ctx.maybeReplyFromStickerSet('insufficient-balance');
-      await ctx.reply(`Your balance would become negative...`);
+      await ctx.reply(`Su saldo es insuficiente...`);
       return;
     } else {
       throw e;
