@@ -5,12 +5,12 @@ module.exports = async ({ ctx, fetchRpc, userId, isPm, reply }) => {
 
   await reply(
     [
-      `I'm a bot (v${version}) written by Andreas Brekken (@abrkn) for tipping Bitcoin (BCH) on Telegram`,
-      'Try the /help command in a private message',
-      `You can tip me and it'll go to the faucet once it's ready.`,
-      `I'm open source: https://github.com/abrkn/tipmebch`,
-      `Report bugs here: https://github.com/abrkn/tipmebch/issues`,
-      `The bot is not a wallet. Your funds will be lost if there are bugs`,
+      `Soy un bot (v${version}) escrito por Andreas Brekken (@abrkn) para inclinar Bitcoin Cash (BCH) en Telegram`,
+      'Pruebe el comando /help en un mensaje privado',
+      `Puede darme propina y se irá al grifo una vez esté listo.`,
+      `Soy un código abierto: https://github.com/abrkn/tipmebch`,
+      `Reportar errores aquí: https://github.com/abrkn/tipmebch/issues`,
+      `El bot no es una billetera. Sus fondos se perderán si hay errores`,
     ].join('\n')
   );
 };
