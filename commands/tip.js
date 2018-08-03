@@ -20,7 +20,7 @@ module.exports = async ({
 }) => {
   if (params.length !== 2) {
     await reply(
-      `El comando que has usado no ha sido escrito correctamente. Sugiero "/propina 0.01 @NombreDeUsuario" or "/propina $1 @NombreDeUsuario"`
+      `El comando que has usado no ha sido escrito correctamente. Sugiero "/tip 0.01 @NombreDeUsuario" or "/tip $1 @NombreDeUsuario"`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
@@ -33,7 +33,7 @@ module.exports = async ({
   if (!toUserMatch) {
     console.warn(`Invalid username format for ${toUserRaw}`);
     await reply(
-      `El formato de nombre de usuario no es válido. Sugiero /propina $1 @NombreDeUsuario`
+      `El formato de nombre de usuario no es válido. Sugiero /tip $1 @NombreDeUsuario`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
@@ -48,7 +48,7 @@ module.exports = async ({
 
   if (!bchAmount) {
     await reply(
-      `No entiendo la cantidad. Sugiero "/propina 0.01 @NombreDeUsuario" or "/propina $1 @NombreDeUsuario"`
+      `No entiendo la cantidad. Sugiero "/tip 0.01 @NombreDeUsuario" or "/tip $1 @NombreDeUsuario"`
     );
     await ctx.maybeReplyFromStickerSet('confused');
     return;
@@ -113,7 +113,7 @@ module.exports = async ({
 
   if (!userIsKnown) {
     await reply(
-      `@${toUsername} necesita reclamar la propina usando el comando /reclamar. @${NombreDeUsuario} puede revertir la propina usando el comando "/undo ${unclaimedId}" hasta ese momento`
+      `@${toUsername} necesita reclamar la propina usando el comando /claim. @${NombreDeUsuario} puede revertir la propina usando el comando "/undo ${unclaimedId}" hasta ese momento`
     );
   }
 
